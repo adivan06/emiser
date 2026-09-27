@@ -96,6 +96,7 @@ a {
     align-items: center;
     gap: 28px;
     font-size: 13px;
+    font-weight: 400;
 }
 
 .nav-links > a:not(.nav-cta) {
@@ -108,8 +109,9 @@ a {
 
 .nav-cta {
     padding: 12px 17px;
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.35);
     border-radius: 2px;
+    font-weight: 400;
     
 }
 
@@ -161,6 +163,7 @@ a {
     background-image: url("../img/arena.jpeg");
     background-size: cover;
     background-position: center 40%;
+    opacity: 0.45;
 }
 
 .hero-overlay {
@@ -413,11 +416,11 @@ h1 em {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
-    background: #d7dde1;
+    background: #c0c9cf;
 }
 
 .card {
-    background: #f7f8f9;
+    background: #d8dadd;
     padding: 34px;
     min-height: 320px;
     position: relative;
@@ -611,14 +614,14 @@ h1 em {
 ========================= */
 
 .why {
-    background: #f2f4f5;
+    background: #d0d5d7;
 }
 
 .why-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1px;
-    background: #d7dde1;
+    background: #b7bcc0;
 }
 
 .why-grid > div {
