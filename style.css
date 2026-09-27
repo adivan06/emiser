@@ -490,67 +490,35 @@ h1 em {
     margin-bottom: 32px;
 }
 
+/* =========================
+   EUROPE COVERAGE MAP
+========================= */
+
 .map {
-    height: 520px;
     position: relative;
-    opacity: 0.95;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
 }
 
-.europe-shape {
+
+/* Harta Europei */
+
+.europe-map {
     position: absolute;
-    right: 3%;
-    top: 38%;
-    font-size: 74px;
-    font-weight: 800;
-    letter-spacing: -0.08em;
-    color: rgba(255, 255, 255, 0.035);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: .16;
+    filter: invert(1);
 }
 
-.dot {
-    position: absolute;
-    width: 46px;
-    height: 46px;
-    border: 1px solid rgba(95, 183, 255, 0.65);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 9px;
-    font-weight: 700;
-    background: rgba(7, 17, 29, 0.8);
-    z-index: 2;
-}
 
-.d1 {
-    left: 35%;
-    bottom: 18%;
-}
+/* =========================
+   RUTE
+========================= */
 
-.d2 {
-    left: 47%;
-    top: 27%;
-}
-
-.d3 {
-    left: 51%;
-    bottom: 14%;
-}
-
-.d4 {
-    left: 30%;
-    top: 42%;
-}
-
-.d5 {
-    left: 42%;
-    top: 14%;
-}
-
-.d6 {
-    left: 56%;
-    top: 42%;
-}
-
-.route {
+.map-route {
     position: absolute;
     height: 1px;
     background: linear-gradient(
@@ -560,30 +528,250 @@ h1 em {
         transparent
     );
     transform-origin: left center;
-    opacity: 0.6;
+    opacity: .55;
+    z-index: 2;
 }
 
-.r1 {
-    width: 230px;
-    left: 37%;
-    top: 49%;
-    transform: rotate(-17deg);
+
+/* România → Germania */
+
+.route-ro-de {
+    width: 150px;
+    left: 63%;
+    top: 57%;
+    transform: rotate(-47deg);
 }
 
-.r2 {
-    width: 190px;
+
+/* România → Italia */
+
+.route-ro-it {
+    width: 180px;
+    left: 63%;
+    top: 58%;
+    transform: rotate(145deg);
+}
+
+
+/* Germania → Olanda */
+
+.route-de-nl {
+    width: 105px;
+    left: 45%;
+    top: 34%;
+    transform: rotate(-35deg);
+}
+
+
+/* Germania → Franța */
+
+.route-de-fr {
+    width: 120px;
+    left: 46%;
+    top: 37%;
+    transform: rotate(150deg);
+}
+
+
+/* Germania → Polonia */
+
+.route-de-pl {
+    width: 120px;
+    left: 48%;
+    top: 34%;
+    transform: rotate(-5deg);
+}
+
+
+/* Germania → Austria */
+
+.route-de-at {
+    width: 115px;
+    left: 48%;
+    top: 40%;
+    transform: rotate(65deg);
+}
+
+
+/* Franța → Spania */
+
+.route-fr-es {
+    width: 125px;
     left: 39%;
     top: 48%;
-    transform: rotate(23deg);
+    transform: rotate(155deg);
 }
 
-.r3 {
-    width: 165px;
-    left: 45%;
+
+/* Spania → Portugalia */
+
+.route-es-pt {
+    width: 70px;
+    left: 30%;
+    top: 58%;
+    transform: rotate(175deg);
+}
+
+
+/* Austria → Slovacia */
+
+.route-at-sk {
+    width: 75px;
+    left: 55%;
     top: 43%;
-    transform: rotate(-55deg);
+    transform: rotate(-25deg);
 }
 
+
+/* Elveția → Italia */
+
+.route-ch-it {
+    width: 100px;
+    left: 48%;
+    top: 48%;
+    transform: rotate(70deg);
+}
+
+
+/* =========================
+   PUNCTE
+========================= */
+
+.country-dot {
+    position: absolute;
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(95,183,255,.7);
+    border-radius: 50%;
+
+    background: rgba(7,17,29,.9);
+
+    color: #dce5eb;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: .05em;
+
+    z-index: 5;
+
+    box-shadow:
+        0 0 0 5px rgba(95,183,255,.035),
+        0 0 18px rgba(95,183,255,.12);
+}
+
+
+/* România - punct principal */
+
+.country-dot.ro {
+    width: 42px;
+    height: 42px;
+
+    background: var(--accent);
+    color: #07111d;
+
+    border-color: #fff;
+
+    box-shadow:
+        0 0 0 7px rgba(95,183,255,.08),
+        0 0 25px rgba(95,183,255,.3);
+}
+
+
+/* =========================
+   POZIȚII ȚĂRI
+========================= */
+
+.ro {
+    left: 64%;
+    top: 55%;
+}
+
+.hu {
+    left: 55%;
+    top: 51%;
+}
+
+.at {
+    left: 49%;
+    top: 44%;
+}
+
+.sk {
+    left: 54%;
+    top: 36%;
+}
+
+.de {
+    left: 43%;
+    top: 31%;
+}
+
+.pl {
+    left: 52%;
+    top: 26%;
+}
+
+.nl {
+    left: 37%;
+    top: 24%;
+}
+
+.be {
+    left: 35%;
+    top: 32%;
+}
+
+.fr {
+    left: 36%;
+    top: 40%;
+}
+
+.ch {
+    left: 43%;
+    top: 44%;
+}
+
+.it {
+    left: 48%;
+    top: 55%;
+}
+
+.es {
+    left: 29%;
+    top: 54%;
+}
+
+.pt {
+    left: 22%;
+    top: 56%;
+}
+
+
+/* =========================
+   EUROPE
+========================= */
+
+.europe-label {
+    position: absolute;
+
+    right: 2%;
+    bottom: 5%;
+
+    font-size: 58px;
+    font-weight: 800;
+
+    letter-spacing: -.08em;
+
+    color: rgba(255,255,255,.035);
+
+    pointer-events: none;
+}
 
 /* =========================
    FLEET
@@ -985,6 +1173,8 @@ footer {
         height: 340px;
     }
 
+    
+
 
     /* Fleet */
     .truck-gallery {
@@ -1034,5 +1224,31 @@ footer {
     .footer-bottom {
         display: block;
         line-height: 2;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .map {
+        height: 330px;
+    }
+
+    .country-dot {
+        width: 25px;
+        height: 25px;
+        font-size: 6px;
+    }
+
+    .country-dot.ro {
+        width: 31px;
+        height: 31px;
+    }
+
+    .map-route {
+        opacity: .3;
+    }
+
+    .europe-label {
+        font-size: 30px;
     }
 }
